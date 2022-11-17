@@ -1,0 +1,10 @@
+
+SCHEMA >
+    `event_type` String `json:$.event_type`,
+    `response` Int16 `json:$.response`,
+    `tenant_id` Int16 `json:$.tenant_id`,
+    `timestamp` DateTime64(3) `json:$.timestamp`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(timestamp)"
+ENGINE_SORTING_KEY "timestamp, event_type, response, tenant_id"
