@@ -37,13 +37,13 @@ Go to your Workspace at ui.tinybird.co (or ui.us-east.tinybird.co) and copy your
 │   └── ..
 │   └── tenant_n_pipe.pipe
 ├── endpoints
-│   └── tenant_1_api.pipe
-│   └── tenant_2_api.pipe
+│   └── tenant_1_usage_current_month.pipe
+│   └── tenant_2_usage_current_month.pipe
 │   └── ..
-│   └── tenant_n_api.pipe
+│   └── tenant_n_usage_current_month.pipe
 ```
 
-In the `/datasources` folder, you'll find the landing Data Source where all tenant data is initially ingested. Each `tenant_n_pipe.pipe` selects only rows for `tenant_id = n`, then materializes them into `tenant_n_ds`. Some examples endpoints (e.g. `tenant_n_api.pipe` demonstrate the functionality.
+In the `/datasources` folder, you'll find the landing Data Source where all tenant data is initially ingested. Each `tenant_n_pipe.pipe` selects only rows for `tenant_id = n`, then materializes them into `tenant_n_ds`. Some example endpoints (e.g. `tenant_n_usage_current_month.pipe`) demonstrate the functionality.
 
 ## Push the Data Project to Tinybird
 After you clone the repo, push the Data Project to Tinybird:
