@@ -1,0 +1,12 @@
+# Data Source generated from Pipe 'tenant_3_pipe'
+
+SCHEMA >
+    `event_type` String,
+    `response` Int16,
+    `tenant_id` Int16,
+    `timestamp` DateTime64(3)
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYYYYMM(`timestamp`)"
+ENGINE_SORTING_KEY "timestamp,event_type,response,tenant_id"
+ENGINE_TTL ""
