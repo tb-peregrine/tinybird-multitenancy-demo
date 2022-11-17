@@ -1,0 +1,8 @@
+
+NODE endpoint
+DESCRIPTION >
+    Generated from the command line
+SQL >
+    select count() from tenant_3_ds where toStartOfMonth(timestamp) = toStartOfMonth(now())
+
+    
